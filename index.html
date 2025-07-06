@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Small Business Website</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        header, footer { background: #f4f4f4; padding: 1em 0; text-align: center; }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 1em; }
+        .hero { background: #e0e7ff; padding: 2em 1em; text-align: center; }
+        .services { display: flex; gap: 1em; justify-content: center; margin: 2em 0; }
+        .service { background: #f9fafb; padding: 1em; border-radius: 8px; width: 200px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);}
+        main { max-width: 900px; margin: 0 auto; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Acme Solutions</h1>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Your Partner in Business Growth</h2>
+            <p>We help small businesses thrive with tailored solutions and expert support.</p>
+            <h2><a href="#contact">Get Started Today</a></h2>
+        </section>
+        <section id="services" class="services">
+            <div class="service">
+                <h3>Consulting</h3>
+                <p>Expert advice to streamline your business operations and boost efficiency.</p>
+            </div>
+            <div class="service">
+                <h3>Marketing</h3>
+                <p>Creative strategies to grow your brand and reach new customers.</p>
+            </div>
+            <div class="service">
+                <h3>Support</h3>
+                <p>Reliable support to keep your business running smoothly every day.</p>
+            </div>
+        </section>
+    </main>
+    <footer id="contact">
+        <p>Contact us: info@acmesolutions.com | (555) 123-4567</p>
+        <p>123 Main St, Hometown, USA</p>
+    </footer>
+</body>
+</html>
+<section style="max-width: 400px; margin: 2em auto; text-align: center;">
+    <h3>Update CTA Headline</h3>
+    <input type="text" id="ctaInput" placeholder="Enter new headline" style="width: 70%; padding: 0.5em;">
+    <button type="button" onclick="updateCTA()">Update</button>
+</section>
+<script>
+function updateCTA() {
+    const newHeadline = document.getElementById('ctaInput').value;
+    const ctaHeading = document.querySelector('.hero h2');
+    if (newHeadline.trim()) {
+        ctaHeading.textContent = newHeadline;
+    }
+}
+</script>
